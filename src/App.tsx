@@ -8,9 +8,9 @@ function App() {
   const [activeTab, setActiveTab] = useState('game')
 
   return (
-    <div className='p-4'>
+    <div className="min-h-screen bg-gray-900 px-4 py-2">
       <Header activeTab={activeTab} setActiveTab={setActiveTab} />
-      <main className='max-w-4xl mx-auto mt-8'>
+      <main className="max-w-5xl mx-auto mt-8 mb-12 px-4">
           {activeTab === 'game' && <SandwichAlignmentGame />}
           {activeTab === 'about' && <About />}
       </main>
