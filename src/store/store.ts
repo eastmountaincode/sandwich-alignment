@@ -2,6 +2,7 @@ import { configureStore } from '@reduxjs/toolkit'
 import { persistStore, persistReducer } from 'redux-persist'
 import storage from 'redux-persist/lib/storage'
 import boardReducer from './boardSlice'
+import selectedSandwichReducer from './selectedSandwichSlice'
 
 const persistConfig = {
   key: 'root',
@@ -13,7 +14,8 @@ const persistedReducer = persistReducer(persistConfig, boardReducer)
 
 export const store = configureStore({
   reducer: {
-    board: persistedReducer
+    board: persistedReducer,
+    selectedSandwich: selectedSandwichReducer
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({

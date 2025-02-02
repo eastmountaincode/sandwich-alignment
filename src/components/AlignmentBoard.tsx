@@ -26,8 +26,8 @@ function AlignmentBoard() {
       <div className="text-gray-800 select-none">
         <div className="absolute top-13 left-1/2 -translate-x-1/2 px-2 py-1 bg-gray-100 border border-gray-400 rounded text-sm">{labels.top}</div>
         <div className="absolute bottom-13 left-1/2 -translate-x-1/2 px-2 py-1 bg-gray-100 border border-gray-400 rounded text-sm">{labels.bottom}</div>
-        <div className="absolute left-14 top-1/2 -translate-y-1/2 px-2 py-1 bg-gray-100 border border-gray-400 rounded text-sm">{labels.left}</div>
-        <div className="absolute right-14 top-1/2 -translate-y-1/2 px-2 py-1 bg-gray-100 border border-gray-400 rounded text-sm">{labels.right}</div>
+        <div className="absolute left-13 top-1/2 -translate-y-1/2 px-2 py-1 bg-gray-100 border border-gray-400 rounded text-sm">{labels.left}</div>
+        <div className="absolute right-13 top-1/2 -translate-y-1/2 px-2 py-1 bg-gray-100 border border-gray-400 rounded text-sm">{labels.right}</div>
       </div>
     </div>
   )
