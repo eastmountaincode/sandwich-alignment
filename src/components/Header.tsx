@@ -14,7 +14,7 @@ interface HeaderProps {
     }
   
     return (
-      <div className="text-gray-400 border-b-2 border-gray-600 mb-4">
+      <div className="text-gray-400 border-b-2 border-gray-600 mb-4 select-none">
         <ul className="flex text-md font-medium text-center">
           <li 
             className={`me-2 ${getTabClasses('game')}`}

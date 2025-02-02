@@ -1,4 +1,5 @@
 import AlignmentBoard from "./AlignmentBoard"
+import ControlPanel from "./ControlPanel"
 import SplashScreen from "./SplashScreen"
 
 function SandwichAlignmentGame() {
@@ -9,7 +10,7 @@ function SandwichAlignmentGame() {
       <div className="hidden lg:flex flex-col gap-4 w-full">
 
         <div className="w-full h-24 bg-gray-800 rounded-lg p-4">
-          {/* Control panel content will go here */}
+          <ControlPanel />
         </div>
 
         <div className="flex gap-4">
