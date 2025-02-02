@@ -52,9 +52,12 @@ const boardSlice = createSlice({
         sandwich.x = action.payload.x
         sandwich.y = action.payload.y
       }
+    },
+    clearBoard: (state) => {
+      state.sandwichesOnBoard = []
     }
   }
 })
 
-export const { setAxisLabels, addSandwich, removeSandwich, updateSandwichPosition } = boardSlice.actions
+export const { setAxisLabels, addSandwich, removeSandwich, updateSandwichPosition, clearBoard } = boardSlice.actions
 export default boardSlice.reducer

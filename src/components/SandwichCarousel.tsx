@@ -35,7 +35,7 @@ function SandwichCarousel() {
   }
 
   return (
-    <div className="w-full h-full rounded-lg flex items-center">
+    <div className="w-full h-full rounded-lg flex items-center select-none">
       <button
         onClick={() => scroll('left')}
         className="px-4 py-2 bg-gray-700 text-gray-200 rounded-l hover:bg-gray-600 h-full"

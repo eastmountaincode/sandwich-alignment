@@ -1,25 +1,49 @@
 import { useSelector, useDispatch } from "react-redux"
 import { RootState } from "../store/store"
-import { addSandwich } from "../store/boardSlice"
+import { addSandwich, Sandwich, updateSandwichPosition } from "../store/boardSlice"
+import LinesAndArrows from "./LinesAndArrows"
+import { setSelectedSandwich } from "../store/selectedSandwichSlice"
+
 
 function AlignmentBoard() {
   const dispatch = useDispatch()
   const labels = useSelector((state: RootState) => state.board.axisLabels)
   const sandwichesOnBoard = useSelector((state: RootState) => state.board.sandwichesOnBoard)
+  const selectedSandwich = useSelector((state: RootState) => state.selectedSandwich.selectedSandwich)
+
 
   const handleDragOver = (e: React.DragEvent) => {
     e.preventDefault()
   }
 
+  const handleSandwichDragStart = (e: React.DragEvent, sandwich: Sandwich) => {
+    e.dataTransfer.setData('sandwich-id', sandwich.id)
+  }
+
+  const handleSandwichClick = (e: React.MouseEvent, sandwich: Sandwich) => {
+    e.stopPropagation()
+    dispatch(setSelectedSandwich(sandwich))
+  }
+
   const handleDrop = (e: React.DragEvent) => {
     e.preventDefault()
-    const sandwich = JSON.parse(e.dataTransfer.getData('application/json'))
-
+    const sandwichId = e.dataTransfer.getData('sandwich-id')
     const board = e.currentTarget.getBoundingClientRect()
     const x = ((e.clientX - board.left) / board.width) * 2 - 1
     const y = ((e.clientY - board.top) / board.height) * 2 - 1
-
-    dispatch(addSandwich({ ...sandwich, x, y }))
+  
+    if (sandwichId) {
+      dispatch(updateSandwichPosition({ id: sandwichId, x, y }))
+      const updatedSandwich = sandwichesOnBoard.find(s => s.id === sandwichId)
+      if (updatedSandwich) {
+        dispatch(setSelectedSandwich({ ...updatedSandwich, x, y }))
+      }
+    } else {
+      const sandwich = JSON.parse(e.dataTransfer.getData('application/json'))
+      const newSandwich = { ...sandwich, x, y }
+      dispatch(addSandwich(newSandwich))
+      dispatch(setSelectedSandwich(newSandwich))
+    }
   }
 
   return (
@@ -28,21 +52,7 @@ function AlignmentBoard() {
       onDragOver={handleDragOver}
       onDrop={handleDrop}
     >
-      <svg
-        className="w-full h-full"
-        viewBox="0 0 500 500"
-        preserveAspectRatio="xMidYMid meet"
-      >
-        {/* Lines */}
-        <line x1="250" y1="20" x2="250" y2="480" stroke="#1f2937" strokeWidth="2" />
-        <line x1="-70" y1="250" x2="570" y2="250" stroke="#1f2937" strokeWidth="2" />
-
-        {/* Arrows */}
-        <path d="M250 15 L240 35 L260 35 Z" fill="#1f2937" />
-<path d="M250 485 L240 465 L260 465 Z" fill="#1f2937" />
-<path d="M-80 250 L-60 240 L-60 260 Z" fill="#1f2937" />
-<path d="M580 250 L560 240 L560 260 Z" fill="#1f2937" />
-      </svg>
+      <LinesAndArrows />
 
       {/* Sandwiches */}
       {sandwichesOnBoard.map(sandwich => (
@@ -50,10 +60,14 @@ function AlignmentBoard() {
           key={sandwich.id}
           src={sandwich.imagePath}
           alt={sandwich.name}
-          className="absolute w-16 h-16 object-cover -translate-x-1/2 -translate-y-1/2"
+          draggable
+          onDragStart={(e) => handleSandwichDragStart(e, sandwich)}
+          onClick={(e) => handleSandwichClick(e, sandwich)}
+          className={`absolute w-28 h-20 object-contain -translate-x-1/2 -translate-y-1/2 cursor-move z-40
+            ${selectedSandwich?.id === sandwich.id ? 'ring-1 ring-gray-500 rounded-xl' : ''}`} 
           style={{
             left: `${((sandwich.x! + 1) / 2) * 100}%`,
-            top: `${((sandwich.y! + 1) / 2) * 100}%`,
+            top: `${((sandwich.y! + 1) / 2) * 100}%`
           }}
         />
       ))}
