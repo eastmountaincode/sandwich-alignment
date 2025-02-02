@@ -7,20 +7,19 @@ import selectedSandwichReducer from './selectedSandwichSlice'
 const persistConfig = {
   key: 'root',
   storage,
-  whitelist: ['board']
 }
 
-const persistedReducer = persistReducer(persistConfig, boardReducer)
+const persistedBoardReducer = persistReducer(persistConfig, boardReducer)
 
 export const store = configureStore({
   reducer: {
-    board: persistedReducer,
+    board: persistedBoardReducer,
     selectedSandwich: selectedSandwichReducer
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
       serializableCheck: {
-        ignoredActions: ['persist/PERSIST', 'persist/REHYDRATE']
+        ignoredActions: ['persist/PERSIST', 'persist/REHYDRATE', 'persist/REGISTER']
       }
     })
 })
