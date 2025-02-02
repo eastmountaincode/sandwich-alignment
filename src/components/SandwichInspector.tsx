@@ -9,8 +9,9 @@ function SandwichInspector() {
       <h2 className="text-2xl font-bold mb-6 text-center tracking-tight">Sandwich Inspector</h2>
       
       {!selectedSandwich ? (
-        <div className="flex items-center justify-center h-[300px] text-gray-400">
+        <div className="flex flex-col items-center justify-center h-[300px] text-gray-400">
           No sandwich selected
+          <span className="text-sm mt-2">(Click on a sandwich to select)</span>
         </div>
       ) : (
         <div className="flex flex-col items-center">

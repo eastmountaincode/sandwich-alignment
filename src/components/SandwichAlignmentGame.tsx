@@ -23,7 +23,7 @@ function SandwichAlignmentGame() {
         </div>
 
         <div className="flex gap-4">
-          <div className="w-[650px] h-[550px] bg-gray-800 rounded-lg">
+          <div className="w-[750px] h-[550px] bg-gray-800 rounded-lg">
             <AlignmentBoard />
           </div>
 
