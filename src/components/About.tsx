@@ -3,12 +3,15 @@ import { MdEmail } from 'react-icons/md'
 
 function About() {
   return (
-    <div className="text-gray-200 max-w-xl mx-auto p-8 text-center">
-      <h1 className="text-3xl font-bold mb-8">About</h1>
-      
-      <div className="space-y-6">
-        <p className="text-lg leading-relaxed">
+    <div className="text-gray-200 max-w-3xl mx-auto p-8 text-center">
+      <h1 className="text-3xl font-bold mb-8 tracking-tight">About</h1>
+      <div className="space-y-6 text-left">
+      <p className="text-lg leading-relaxed">
           Does what it says on the tin. This is not just a game about putting sandwiches on the alignment chart - it's a tool for introspection. Try playing it with a friend or two and see if you really know what it means to be good or evil, lawful or chaotic.
+        </p>
+
+        <p className="text-lg leading-relaxed text-gray-400">
+          <strong>How To Use</strong>: Drag sandwiches from the carousel at the bottom onto the alignment chart.
         </p>
 
         <div className="pt-4 text-gray-400">
@@ -25,7 +28,6 @@ function About() {
             . All credit goes there! Thank you so much.
           </p>
         </div>
-
         <div className="pt-8">
           <p className="mb-4">
             Created by{' '}
@@ -39,7 +41,7 @@ function About() {
             </a>
           </p>
           
-          <div className="flex space-x-4 justify-center">
+          <div className="flex space-x-4">
             <a
               href="https://www.linkedin.com/in/andrew-boylan-92842810a/"
               target="_blank"
