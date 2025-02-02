@@ -7,7 +7,7 @@ function About() {
       <h1 className="text-3xl font-bold mb-8 tracking-tight">About</h1>
       <div className="space-y-6 text-left">
       <p className="text-lg leading-relaxed">
-          Does what it says on the tin. This is not just a game about putting sandwiches on the alignment chart - it's a tool for introspection. Try playing it with a friend or two and see if you really know what it means to be good or evil, lawful or chaotic.
+          Does what it says on the tin. But it's not just a game about putting sandwiches on an alignment chart - it's a tool for introspection. Try playing it with a friend or two and see if you really know what it means to be good or evil, lawful or chaotic.
         </p>
 
         <p className="text-lg leading-relaxed text-gray-400">
