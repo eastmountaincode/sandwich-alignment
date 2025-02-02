@@ -1,0 +1,295 @@
+{
+    "sandwiches": [
+      {
+        "id": "chicken-cutlet-special",
+        "name": "Chicken Cutlet Special",
+        "imagePath": "/sandwich-alignment/sandwich_gifs/02e0e-chicken-cutlet-special.gif"
+      },
+      {
+        "id": "cousin-ciro",
+        "name": "Cousin Ciro (Regina's Grocery)",
+        "imagePath": "/sandwich-alignment/sandwich_gifs/42e66-cousin-ciro-reginas-grocery.gif"
+      },
+      {
+        "id": "costco-rotisserie-chicken",
+        "name": "Costco Rotisserie Chicken on Croissant",
+        "imagePath": "/sandwich-alignment/sandwich_gifs/5397d-costco-rotisserie-chicken-on-croissant.gif"
+      },
+      {
+        "id": "grilled-cheese",
+        "name": "Grilled Cheese",
+        "imagePath": "/sandwich-alignment/sandwich_gifs/5fcba-grilled-cheese.gif"
+      },
+      {
+        "id": "double-double",
+        "name": "Double Double Animal Style",
+        "imagePath": "/sandwich-alignment/sandwich_gifs/88898-double-double-animal-style.gif"
+      },
+      {
+        "id": "a-litteri",
+        "name": "A. Litteri",
+        "imagePath": "/sandwich-alignment/sandwich_gifs/a-litteri-take-2.gif"
+      },
+      {
+        "id": "banh-mi",
+        "name": "Banh Mi",
+        "imagePath": "/sandwich-alignment/sandwich_gifs/banh-mi-bg-removed.gif"
+      },
+      {
+        "id": "beef-bulgogi-torta",
+        "name": "Beef Bulgogi Torta",
+        "imagePath": "/sandwich-alignment/sandwich_gifs/beef-bulgogi-torta.gif"
+      },
+      {
+        "id": "beef-hot-wet",
+        "name": "Beef Hot Wet",
+        "imagePath": "/sandwich-alignment/sandwich_gifs/beef-hot-wet.gif"
+      },
+      {
+        "id": "bonkers-chinese-burger",
+        "name": "Bonkers Chinese Burger",
+        "imagePath": "/sandwich-alignment/sandwich_gifs/bonkers-chinese-burger.gif"
+      },
+      {
+        "id": "brisket-sandwich",
+        "name": "Brisket Sandwich",
+        "imagePath": "/sandwich-alignment/sandwich_gifs/brisket-sandwich.gif"
+      },
+      {
+        "id": "broccoli-reuben",
+        "name": "Broccoli Reuben",
+        "imagePath": "/sandwich-alignment/sandwich_gifs/broccoli-reuben.gif"
+      },
+      {
+        "id": "bub-and-pops",
+        "name": "Bub and Pop's Italian Hoagie",
+        "imagePath": "/sandwich-alignment/sandwich_gifs/bub-and-pops-italian-hoagie.gif"
+      },
+      {
+        "id": "rpg",
+        "name": "The RPG",
+        "imagePath": "/sandwich-alignment/sandwich_gifs/c6910-the-rpg.gif"
+      },
+      {
+        "id": "california-chicken-wrap",
+        "name": "California Chicken Wrap",
+        "imagePath": "/sandwich-alignment/sandwich_gifs/california-chicken-wrap.gif"
+      },
+      {
+        "id": "rosemary-braised-beef",
+        "name": "Rosemary Braised Beef",
+        "imagePath": "/sandwich-alignment/sandwich_gifs/cfa9c-rosemary-braised-beef.gif"
+      },
+      {
+        "id": "club-royale",
+        "name": "Club Royale",
+        "imagePath": "/sandwich-alignment/sandwich_gifs/club-royale-final.gif"
+      },
+      {
+        "id": "club-sandwich",
+        "name": "Club Sandwich",
+        "imagePath": "/sandwich-alignment/sandwich_gifs/club-sandwich.gif"
+      },
+      {
+        "id": "cold-cut-trio-banh-mi",
+        "name": "Cold Cut Trio Banh Mi",
+        "imagePath": "/sandwich-alignment/sandwich_gifs/cold-cut-trio-banh-mi.gif"
+      },
+      {
+        "id": "grocery-store-sub",
+        "name": "Doctored Up Grocery Store Sub",
+        "imagePath": "/sandwich-alignment/sandwich_gifs/doctored-up-grocery-store-sub.gif"
+      },
+      {
+        "id": "egg-turkey-sausage-bagel",
+        "name": "Egg and Turkey Sausage on Onion Bagel",
+        "imagePath": "/sandwich-alignment/sandwich_gifs/egg-and-turkey-sausage-on-onion-bagel.gif"
+      },
+      {
+        "id": "eggplant-parm",
+        "name": "Eggplant Parm",
+        "imagePath": "/sandwich-alignment/sandwich_gifs/eggplant-parm-1.gif"
+      },
+      {
+        "id": "fried-fish-hanks",
+        "name": "Fried Fish Sandwich (Hank's)",
+        "imagePath": "/sandwich-alignment/sandwich_gifs/fried-fish-sandwich-hanks.gif"
+      },
+      {
+        "id": "fried-fish",
+        "name": "Fried Fish Sandwich",
+        "imagePath": "/sandwich-alignment/sandwich_gifs/fried-fish-sandwich.gif"
+      },
+      {
+        "id": "half-smoke-egg-cheese",
+        "name": "Half Smoke Egg and Cheese",
+        "imagePath": "/sandwich-alignment/sandwich_gifs/half-smoke-egg-and-cheese.gif"
+      },
+      {
+        "id": "half-smoke",
+        "name": "Half Smoke",
+        "imagePath": "/sandwich-alignment/sandwich_gifs/half-smoke.gif"
+      },
+      {
+        "id": "ispahan-macaron",
+        "name": "Ispahan Macaron",
+        "imagePath": "/sandwich-alignment/sandwich_gifs/ispahan-macaron.gif"
+      },
+      {
+        "id": "jambon-buerre",
+        "name": "Jambon Buerre",
+        "imagePath": "/sandwich-alignment/sandwich_gifs/jambon-buerre.gif"
+      },
+      {
+        "id": "jerk-chicken",
+        "name": "Jerk Chicken Sandwich",
+        "imagePath": "/sandwich-alignment/sandwich_gifs/jerk-chicken-sandwich.gif"
+      },
+      {
+        "id": "lamb-souvlaki",
+        "name": "Lamb Souvlaki",
+        "imagePath": "/sandwich-alignment/sandwich_gifs/lamb-souvlaki.gif"
+      },
+      {
+        "id": "leftovers",
+        "name": "Leftovers Sandwich",
+        "imagePath": "/sandwich-alignment/sandwich_gifs/leftovers-sandwich.gif"
+      },
+      {
+        "id": "meatball-sub",
+        "name": "Meatball Sub",
+        "imagePath": "/sandwich-alignment/sandwich_gifs/meatball-sub.gif"
+      },
+      {
+        "id": "mortadella-prosciutto-burrata",
+        "name": "Mortadella, Prosciutto, and Burrata",
+        "imagePath": "/sandwich-alignment/sandwich_gifs/mortadella-prosciutto-and-burrata.gif"
+      },
+      {
+        "id": "neapolitan-ice-cream",
+        "name": "Neapolitan Ice Cream Sandwich",
+        "imagePath": "/sandwich-alignment/sandwich_gifs/neapolitan-ice-cream-sandwich.gif"
+      },
+      {
+        "id": "negril-fish",
+        "name": "Negril Fish Sandwich",
+        "imagePath": "/sandwich-alignment/sandwich_gifs/negril-fish-sandwich.gif"
+      },
+      {
+        "id": "north-carolina-pork",
+        "name": "North Carolina Chopped Pork",
+        "imagePath": "/sandwich-alignment/sandwich_gifs/north-carolina-chopped-pork.gif"
+      },
+      {
+        "id": "pabellon-arepa",
+        "name": "Pabellon Arepa",
+        "imagePath": "/sandwich-alignment/sandwich_gifs/pabellon-arrepa.gif"
+      },
+      {
+        "id": "peking-duck-bao",
+        "name": "Peking Duck Bao",
+        "imagePath": "/sandwich-alignment/sandwich_gifs/peking-duck-bao.gif"
+      },
+      {
+        "id": "pork-gyro",
+        "name": "Pork Gyro",
+        "imagePath": "/sandwich-alignment/sandwich_gifs/pork-gyro.gif"
+      },
+      {
+        "id": "reuben",
+        "name": "Reuben",
+        "imagePath": "/sandwich-alignment/sandwich_gifs/reuben.gif"
+      },
+      {
+        "id": "roast-beef-spinach-wrap",
+        "name": "Roast Beef Spinach Wrap",
+        "imagePath": "/sandwich-alignment/sandwich_gifs/roast-beef-spinach-wrap.gif"
+      },
+      {
+        "id": "salt-bagel-lox",
+        "name": "Salt Bagel with Lox",
+        "imagePath": "/sandwich-alignment/sandwich_gifs/salt-bagel-with-lox-cc.gif"
+      },
+      {
+        "id": "scrambled-egg-fried-chicken",
+        "name": "Scrambled Egg and Fried Chicken Sandwich",
+        "imagePath": "/sandwich-alignment/sandwich_gifs/scrambled-egg-and-fried-chicken-sandwich.gif"
+      },
+      {
+        "id": "smoked-salmon-cucumber",
+        "name": "Smoked Salmon and Cucumber on Croissant",
+        "imagePath": "/sandwich-alignment/sandwich_gifs/smoked-salmon-and-cucumber-on-croissant.gif"
+      },
+      {
+        "id": "spicy-cumin-lamb",
+        "name": "Spicy Cumin Lamb Burger",
+        "imagePath": "/sandwich-alignment/sandwich_gifs/spicy-cumin-lamb-burger.gif"
+      },
+      {
+        "id": "stachowskis-pastrami",
+        "name": "Stachowski's Pastrami",
+        "imagePath": "/sandwich-alignment/sandwich_gifs/stachowskis-pastrami-regraded-1.gif"
+      },
+      {
+        "id": "summer-tomato",
+        "name": "Summer Tomato Sandwich",
+        "imagePath": "/sandwich-alignment/sandwich_gifs/summer-tomato-sandwich.gif"
+      },
+      {
+        "id": "swedish-hot-dog",
+        "name": "Swedish Hot Dog with Shrimp Salad",
+        "imagePath": "/sandwich-alignment/sandwich_gifs/swedish-hot-dog-with-shrimp-salad.gif"
+      },
+      {
+        "id": "swedish-smoked-salmon",
+        "name": "Swedish Smoked Salmon and Poached Egg on Toast",
+        "imagePath": "/sandwich-alignment/sandwich_gifs/swedish-smoked-salmon-and-poached-egg-on-toast.gif"
+      },
+      {
+        "id": "taylor-ham",
+        "name": "Taylor Ham Pork Roll",
+        "imagePath": "/sandwich-alignment/sandwich_gifs/taylor-ham-pork-roll.gif"
+      },
+      {
+        "id": "the-dude",
+        "name": "The Dude",
+        "imagePath": "/sandwich-alignment/sandwich_gifs/the-dude.gif"
+      },
+      {
+        "id": "hebrew-hammer",
+        "name": "The Hebrew Hammer",
+        "imagePath": "/sandwich-alignment/sandwich_gifs/the-hebrew-hammer.gif"
+      },
+      {
+        "id": "top-round-swiss",
+        "name": "Top Round and Swiss with Gravy",
+        "imagePath": "/sandwich-alignment/sandwich_gifs/top-round-and-swiss-with-gravy-v2.gif"
+      },
+      {
+        "id": "torta-milanesa",
+        "name": "Torta Milanesa",
+        "imagePath": "/sandwich-alignment/sandwich_gifs/torta-milanesa.gif"
+      },
+      {
+        "id": "tuna-salad-hoagie",
+        "name": "Tuna Salad Hoagie",
+        "imagePath": "/sandwich-alignment/sandwich_gifs/tuna-salad-hoagie.gif"
+      },
+      {
+        "id": "turkey-cheddar",
+        "name": "Turkey and Cheddar",
+        "imagePath": "/sandwich-alignment/sandwich_gifs/turkey-and-cheddar.gif"
+      },
+      {
+        "id": "vegan-root-vegetable",
+        "name": "Vegan Root Vegetable Hoagie with Carrot Provolone",
+        "imagePath": "/sandwich-alignment/sandwich_gifs/vegan-root-vegetable-hoagie-with-carrot-provolone.gif"
+      },
+      {
+        "id": "z-burger-bacon-cheese",
+        "name": "Z-Burger Bacon Cheese Dog",
+        "imagePath": "/sandwich-alignment/sandwich_gifs/z-burger-bacon-cheese-dog.gif"
+      }
+    ]
+  }
+  

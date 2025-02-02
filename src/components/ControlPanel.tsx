@@ -5,8 +5,8 @@ function ControlPanel() {
     const [isModalOpen, setIsModalOpen] = useState(false)
 
     return (
-        <div className="flex items-center justify-between p-4">
-            <div className="text-gray-200">
+        <div className="flex justify-between items-center w-full rounded-lg mx-4">
+            <div className="text-gray-200 ms-4">
                 Sandwiches placed: - / -
             </div>
 
@@ -20,7 +20,6 @@ function ControlPanel() {
                 >
                     Set Axis Labels
                 </button>
-
             </div>
 
             {isModalOpen && (

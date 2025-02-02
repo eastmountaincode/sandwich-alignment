@@ -1,5 +1,13 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 
+export interface Sandwich {
+  id: string
+  name: string
+  imagePath: string
+  x?: number
+  y?: number
+}
+
 interface BoardState {
   axisLabels: {
     top: string
@@ -7,6 +15,7 @@ interface BoardState {
     left: string
     right: string
   }
+  sandwichesOnBoard: Sandwich[]
 }
 
 const initialState: BoardState = {
@@ -15,7 +24,8 @@ const initialState: BoardState = {
     bottom: 'Evil',
     left: 'Lawful',
     right: 'Chaotic'
-  }
+  },
+  sandwichesOnBoard: []
 }
 
 const boardSlice = createSlice({
@@ -24,9 +34,27 @@ const boardSlice = createSlice({
   reducers: {
     setAxisLabels: (state, action: PayloadAction<BoardState['axisLabels']>) => {
       state.axisLabels = action.payload
+    },
+    addSandwich: (state, action: PayloadAction<Sandwich>) => {
+      state.sandwichesOnBoard.push(action.payload)
+    },
+    removeSandwich: (state, action: PayloadAction<string>) => {
+      state.sandwichesOnBoard = state.sandwichesOnBoard.filter(
+        sandwich => sandwich.id !== action.payload
+      )
+    },
+    updateSandwichPosition: (
+      state,
+      action: PayloadAction<{ id: string; x: number; y: number }>
+    ) => {
+      const sandwich = state.sandwichesOnBoard.find(s => s.id === action.payload.id)
+      if (sandwich) {
+        sandwich.x = action.payload.x
+        sandwich.y = action.payload.y
+      }
     }
   }
 })
 
-export const { setAxisLabels } = boardSlice.actions
+export const { setAxisLabels, addSandwich, removeSandwich, updateSandwichPosition } = boardSlice.actions
 export default boardSlice.reducer
