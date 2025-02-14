@@ -1,8 +1,7 @@
 import { MongoClient } from 'mongodb';
-import fetch from 'node-fetch';
+import fetch from 'node-fetch'; // Ensure you have node-fetch installed
 
 const uri = process.env.MONGODB_URI;
-let client;
 
 async function fetchIpAddress() {
   try {
@@ -17,18 +16,13 @@ async function fetchIpAddress() {
 
 export default async function handler(req, res) {
   if (req.method === 'POST') {
+    let client;
     try {
       const ipAddress = await fetchIpAddress();
 
-      // Initialize the MongoDB client if it hasn't been initialized
-      if (!client) {
-        client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
-      }
-
-      // Connect to the database
-      if (!client.isConnected()) {
-        await client.connect();
-      }
+      // Initialize and connect the MongoDB client
+      client = new MongoClient(uri);
+      await client.connect();
 
       const db = client.db('sandwich-alignment');
       const collection = db.collection('sandwich-board-records');
@@ -40,6 +34,10 @@ export default async function handler(req, res) {
     } catch (error) {
       console.error('Error inserting board state:', error);
       res.status(500).json({ error: 'Failed to insert board state', details: error.message });
+    } finally {
+      if (client) {
+        await client.close();
+      }
     }
   } else {
     res.setHeader('Allow', ['POST']);
