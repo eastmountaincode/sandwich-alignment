@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-
 import { clearBoard } from '../store/boardSlice'
 import { setSelectedSandwich } from '../store/selectedSandwichSlice'
 import AxisLabelModal from './AxisLabelModal'
@@ -8,48 +7,57 @@ import { RootState } from '../store/store'
 import sandwichData from '../data/sandwiches.json'
 import ClearBoardModal from './ClearBoardModal'
 import Celebration from './Celebration'
-
+import SubmissionModal from './SubmissionModal'
 
 function ControlPanel() {
     const dispatch = useDispatch()
     const [isModalOpen, setIsModalOpen] = useState(false)
     const [isClearModalOpen, setIsClearModalOpen] = useState(false)
+    const [isSubmissionModalOpen, setIsSubmissionModalOpen] = useState(false)
+    const [isSubmitting, setIsSubmitting] = useState(false)
+    const [submissionSuccess, setSubmissionSuccess] = useState(false)
     const sandwichesOnBoard = useSelector((state: RootState) => state.board.sandwichesOnBoard)
 
     const handleClearConfirm = () => {
-        dispatch(clearBoard())
-        dispatch(setSelectedSandwich(null))
-        setIsClearModalOpen(false)
+      dispatch(clearBoard())
+      dispatch(setSelectedSandwich(null))
+      setIsClearModalOpen(false)
     }
 
     const handleSubmitBoard = async () => {
-        console.log('Submitting board state:', sandwichesOnBoard);
-    
-        try {
-            const response = await fetch('/api/submitBoard', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ sandwichesOnBoard }),
-            });
-    
-            if (!response.ok) {
-                throw new Error('Failed to submit board');
-            }
-    
-            const data = await response.json();
-            console.log('Board submitted:', data);
-        } catch (error) {
-            console.error('Error submitting board:', error);
+      setIsSubmitting(true)
+      try {
+        const response = await fetch('/api/submitBoard', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ sandwichesOnBoard }),
+        })
+
+        if (!response.ok) {
+          throw new Error('Failed to submit board')
         }
-    };
+
+        const data = await response.json()
+        console.log('Board submitted:', data)
+        setSubmissionSuccess(true)
+        setTimeout(() => {
+          setIsSubmissionModalOpen(false)
+          setSubmissionSuccess(false)
+        }, 3000) // Close modal after 3 seconds
+      } catch (error) {
+        console.error('Error submitting board:', error)
+      } finally {
+        setIsSubmitting(false)
+      }
+    }
 
     return (
-        <div className="flex justify-between items-center w-full rounded-lg mx-4">
-            <div className="text-gray-200 ms-4">
-                Sandwiches placed: {sandwichesOnBoard.length} / {sandwichData.sandwiches.length}
-            </div>
+      <div className="flex justify-between items-center w-full rounded-lg mx-4">
+        <div className="text-gray-200 ms-4">
+          Sandwiches placed: {sandwichesOnBoard.length} / {sandwichData.sandwiches.length}
+        </div>
 
             <div className="flex gap-4">
                 <button
@@ -72,23 +80,27 @@ function ControlPanel() {
                 </button>
             </div>
 
-            {isModalOpen && (
-                <AxisLabelModal
-                    onClose={() => setIsModalOpen(false)}
-                />
-            )}
+        {isModalOpen && (
+          <AxisLabelModal onClose={() => setIsModalOpen(false)} />
+        )}
 
-            {isClearModalOpen && (
-                <ClearBoardModal
-                    onClose={() => setIsClearModalOpen(false)}
-                    onConfirm={handleClearConfirm}
-                />
-            )}
+        {isClearModalOpen && (
+          <ClearBoardModal onClose={() => setIsClearModalOpen(false)} onConfirm={handleClearConfirm} />
+        )}
 
-            {sandwichesOnBoard.length === sandwichData.sandwiches.length && <Celebration />}
+        {isSubmissionModalOpen && (
+          <SubmissionModal
+            isOpen={isSubmissionModalOpen}
+            onClose={() => setIsSubmissionModalOpen(false)}
+            onSubmit={handleSubmitBoard}
+            sandwichesOnBoard={sandwichesOnBoard}
+            isSubmitting={isSubmitting}
+            submissionSuccess={submissionSuccess}
+          />
+        )}
 
-
-        </div>
+        {sandwichesOnBoard.length === sandwichData.sandwiches.length && <Celebration />}
+      </div>
     )
 }
 
