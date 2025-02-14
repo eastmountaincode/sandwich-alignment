@@ -1,5 +1,5 @@
 import { MongoClient } from 'mongodb';
-import fetch from 'node-fetch'; // Ensure you have node-fetch installed
+import fetch from 'node-fetch';
 
 const uri = process.env.MONGODB_URI;
 let client;
