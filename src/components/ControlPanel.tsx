@@ -24,34 +24,34 @@ function ControlPanel() {
         setIsClearModalOpen(false)
     }
 
-    const handleSubmitBoard = async () => {
-        setIsSubmitting(true)
+    const handleSubmitBoard = async (note: string) => {
+        setIsSubmitting(true);
         try {
-            const response = await fetch('/api/submitBoard', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ sandwichesOnBoard }),
-            })
-
-            if (!response.ok) {
-                throw new Error('Failed to submit board')
-            }
-
-            const data = await response.json()
-            console.log('Board submitted:', data)
-            setSubmissionSuccess(true)
-            setTimeout(() => {
-                setIsSubmissionModalOpen(false)
-                setSubmissionSuccess(false)
-            }, 3000) // Close modal after 3 seconds
+          const response = await fetch('/api/submitBoard', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ sandwichesOnBoard, note }),
+          });
+    
+          if (!response.ok) {
+            throw new Error('Failed to submit board');
+          }
+    
+          const data = await response.json();
+          console.log('Board submitted:', data);
+          setSubmissionSuccess(true);
+          setTimeout(() => {
+            setIsSubmissionModalOpen(false);
+            setSubmissionSuccess(false);
+          }, 3000); // Close modal after 3 seconds
         } catch (error) {
-            console.error('Error submitting board:', error)
+          console.error('Error submitting board:', error);
         } finally {
-            setIsSubmitting(false)
+          setIsSubmitting(false);
         }
-    }
+      };
 
     return (
         <div className="flex justify-between items-center w-full rounded-lg mx-4">
