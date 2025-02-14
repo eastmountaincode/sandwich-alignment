@@ -16,7 +16,10 @@ function ControlPanel() {
     const [isSubmissionModalOpen, setIsSubmissionModalOpen] = useState(false)
     const [isSubmitting, setIsSubmitting] = useState(false)
     const [submissionSuccess, setSubmissionSuccess] = useState(false)
+
     const sandwichesOnBoard = useSelector((state: RootState) => state.board.sandwichesOnBoard)
+    const axisLabels = useSelector((state: RootState) => state.board.axisLabels);
+
 
     const handleClearConfirm = () => {
         dispatch(clearBoard())
@@ -32,8 +35,8 @@ function ControlPanel() {
             headers: {
               'Content-Type': 'application/json',
             },
-            body: JSON.stringify({ sandwichesOnBoard, note }),
-          });
+            body: JSON.stringify({ sandwichesOnBoard, axisLabels, note }),
+        });
     
           if (!response.ok) {
             throw new Error('Failed to submit board');
