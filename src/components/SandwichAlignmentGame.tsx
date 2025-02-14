@@ -1,17 +1,36 @@
-import { useDispatch } from "react-redux"
+import { useDispatch, useSelector } from "react-redux"
 import AlignmentBoard from "./AlignmentBoard"
 import ControlPanel from "./ControlPanel"
 import SandwichCarousel from "./SandwichCarousel"
 import SandwichInspector from "./SandwichInspector"
 import SplashScreen from "./SplashScreen"
 import { setSelectedSandwich } from "../store/selectedSandwichSlice"
+import { useEffect } from "react"
+import { removeSandwich } from "../store/boardSlice"
+import { RootState } from "../store/store"
 
 function SandwichAlignmentGame() {
+  const dispatch = useDispatch();
+  const selectedSandwich = useSelector((state: RootState) => state.selectedSandwich.selectedSandwich);
 
-  const dispatch = useDispatch()
   const handleBackgroundClick = () => {
     dispatch(setSelectedSandwich(null))
   }
+
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Backspace" && selectedSandwich) {
+        dispatch(removeSandwich(selectedSandwich.id));
+        dispatch(setSelectedSandwich(null));
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [dispatch, selectedSandwich]);
 
   return (
     <>
@@ -42,5 +61,4 @@ function SandwichAlignmentGame() {
     </>
   )
 }
-
 export default SandwichAlignmentGame

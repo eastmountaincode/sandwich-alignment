@@ -8,6 +8,7 @@ import { RootState } from '../store/store'
 import sandwichData from '../data/sandwiches.json'
 import ClearBoardModal from './ClearBoardModal'
 import Celebration from './Celebration'
+import { fetchIpAddress } from '../util/fetchip'
 
 
 function ControlPanel() {
@@ -22,6 +23,29 @@ function ControlPanel() {
         setIsClearModalOpen(false)
     }
 
+    const handleSubmitBoard = async () => {
+        console.log('Submitting board state:', sandwichesOnBoard);
+        try {
+            const ipAddress = await fetchIpAddress();
+            const response = await fetch('/api/submitBoard', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ sandwichesOnBoard, ipAddress }),
+            });
+
+            if (!response.ok) {
+                throw new Error('Failed to submit board');
+            }
+
+            const data = await response.json();
+            console.log('Board submitted:', data);
+        } catch (error) {
+            console.error('Error submitting board:', error);
+        }
+    };
+
     return (
         <div className="flex justify-between items-center w-full rounded-lg mx-4">
             <div className="text-gray-200 ms-4">
@@ -31,15 +55,21 @@ function ControlPanel() {
             <div className="flex gap-4">
                 <button
                     onClick={() => setIsClearModalOpen(true)}
-                    className="px-4 py-2 bg-gray-700 text-gray-200 rounded hover:bg-gray-600"
+                    className="px-4 py-2 bg-gray-700 text-gray-200 rounded hover:bg-gray-600 cursor-pointer"
                 >
                     Clear Board
                 </button>
                 <button
-                    className="px-4 py-2 bg-gray-700 text-gray-200 rounded hover:bg-gray-600"
+                    className="px-4 py-2 bg-gray-700 text-gray-200 rounded hover:bg-gray-600 cursor-pointer"
                     onClick={() => setIsModalOpen(true)}
                 >
                     Set Axis Labels
+                </button>
+                <button
+                    onClick={handleSubmitBoard}
+                    className="px-4 py-2 bg-purple-500 text-gray-200 rounded hover:bg-purple-400 cursor-pointer"
+                >
+                    Submit Board
                 </button>
             </div>
 
