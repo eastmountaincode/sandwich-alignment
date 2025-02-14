@@ -8,7 +8,6 @@ import { RootState } from '../store/store'
 import sandwichData from '../data/sandwiches.json'
 import ClearBoardModal from './ClearBoardModal'
 import Celebration from './Celebration'
-import { fetchIpAddress } from '../util/fetchip'
 
 
 function ControlPanel() {
@@ -25,20 +24,20 @@ function ControlPanel() {
 
     const handleSubmitBoard = async () => {
         console.log('Submitting board state:', sandwichesOnBoard);
+    
         try {
-            const ipAddress = await fetchIpAddress();
             const response = await fetch('/api/submitBoard', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({ sandwichesOnBoard, ipAddress }),
+                body: JSON.stringify({ sandwichesOnBoard }),
             });
-
+    
             if (!response.ok) {
                 throw new Error('Failed to submit board');
             }
-
+    
             const data = await response.json();
             console.log('Board submitted:', data);
         } catch (error) {
