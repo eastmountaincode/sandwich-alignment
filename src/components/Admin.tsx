@@ -6,7 +6,6 @@ function Admin() {
   const [isLoading, setIsLoading] = useState(false);
   const [isGenerating, setIsGenerating] = useState(false);
   const [generatedData, setGeneratedData] = useState<any>(null);
-
   const handlePasswordChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setPassword(e.target.value);
   };
@@ -14,7 +13,7 @@ function Admin() {
   const handleLogin = async () => {
     setIsLoading(true);
     try {
-      const response = await fetch('/api/auth', {
+      const response = await fetch(`/api/auth`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
