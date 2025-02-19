@@ -28,6 +28,10 @@ const BoardSchema = z.object({
   source: z.literal("ai-generated")
 });
 
+function shuffleSandwiches(sandwiches) {
+  return [...sandwiches].sort(() => Math.random() - 0.5);
+}
+
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
     return res.status(405).json({ message: 'Method not allowed' });
@@ -39,9 +43,8 @@ export default async function handler(req, res) {
     );
 
     // Shuffle the sandwich IDs
-    const shuffledIds = [...sandwichData.sandwiches]
-      .sort(() => Math.random() - 0.5)
-      .map(s => s.id);
+    const shuffledSandwiches = shuffleSandwiches(sandwichData.sandwiches);
+
 
     try {
       const completion = await openai.beta.chat.completions.parse({
@@ -49,11 +52,11 @@ export default async function handler(req, res) {
         messages: [
           {
             role: "system",
-            content: "You are an expert in generating realistic synthetic data. Generate positions for sandwiches on a chart where X coordinates represent Lawful (-1) to Chaotic (1) and Y coordinates represent Good (1) to Evil (-1). Coordinates should have 3 decimal places."
+            content: "You are an expert in generating realistic synthetic data. Generate positions for sandwiches on a chart where X coordinates represent Lawful (-1) to Chaotic (1) and Y coordinates represent Good (1) to Evil (-1). Coordinates should go to 3 decimal places."
           },
           {
             role: "user",
-            content: `Generate board data. Generate 10-20 entries. Use sandwich IDs from this list: ${shuffledIds.join(', ')}.`
+            content: `Generate board data. Generate 10-20 entries. Use sandwich IDs from this list: ${shuffledSandwiches.map(s => s.id).join(', ')}.`
           }
         ],
         response_format: zodResponseFormat(BoardSchema, "board")
