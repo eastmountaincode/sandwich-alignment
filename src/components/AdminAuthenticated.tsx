@@ -84,7 +84,7 @@ function AdminAuthenticated() {
     return (
         <div className="min-h-screen bg-gray-900 text-gray-200 p-8">
             <h1 className="text-2xl mb-6">Admin Dashboard</h1>
-            <div className="bg-gray-800 rounded-lg p-6">
+            <div className="bg-gray-800 rounded-lg p-6 mb-4">
                 <h2 className="text-xl mb-4">Database Management</h2>
                 <div className='flex'>
                     <button
