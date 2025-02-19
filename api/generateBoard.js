@@ -1,7 +1,16 @@
 import OpenAI from "openai";
 import { zodResponseFormat } from "openai/helpers/zod";
 import { z } from "zod";
-import sandwichData from '../src/data/sandwiches.json' with { type: 'json' };
+
+import { readFileSync } from 'fs';
+import { fileURLToPath } from 'url';
+import { dirname, join } from 'path';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+const sandwichData = JSON.parse(
+  readFileSync(join(__dirname, '../src/data/sandwiches.json'), 'utf8')
+);
 
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
