@@ -10,6 +10,8 @@ function AdminAuthenticated() {
 
     const handleGenerateBoard = async () => {
         setIsGenerating(true);
+        setSubmissionSuccess(false);
+
         try {
             const response = await fetch('/api/generateBoard', {
                 method: 'POST',
