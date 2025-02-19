@@ -33,7 +33,7 @@ export default async function handler(req, res) {
             content: `Generate board data using sandwich IDs from this list: ${sandwichData.sandwiches.map(s => s.id).join(', ')}`
           }
         ],
-        response_format: { type: "json_object" }
+        // response_format: { type: "json_object" }
       });
 
       return res.status(200).json(completion.choices[0].message.content);
