@@ -1,7 +1,7 @@
 import OpenAI from "openai";
 import { zodResponseFormat } from "openai/helpers/zod";
 import { z } from "zod";
-const sandwichData = require('../src/data/sandwiches.json');
+import sandwichData from '../src/data/sandwiches.json' with { type: 'json' };
 
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
