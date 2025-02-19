@@ -6,6 +6,7 @@ function AdminAuthenticated() {
     const [generatedData, setGeneratedData] = useState<any>(null);
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [submissionSuccess, setSubmissionSuccess] = useState(false);
+    const [clearSuccess, setClearSuccess] = useState(false);
     const [isClearing, setIsClearing] = useState(false);
 
     const handleGenerateBoard = async () => {
@@ -46,8 +47,8 @@ function AdminAuthenticated() {
                 throw new Error('Failed to submit board');
             }
 
-            const data = await response.json();
-            console.log('Board submitted:', data);
+            // const data = await response.json();
+            // console.log('Board submitted:', data);
             setSubmissionSuccess(true);
         } catch (error) {
             console.error('Error submitting board:', error);
@@ -70,8 +71,9 @@ function AdminAuthenticated() {
                 throw new Error('Failed to clear collection');
             }
 
-            const data = await response.json();
-            console.log('Collection cleared:', data);
+            // const data = await response.json();
+            // console.log('Collection cleared:', data);
+            setClearSuccess(true);
         } catch (error) {
             console.error('Error clearing collection:', error);
         } finally {
@@ -94,6 +96,8 @@ function AdminAuthenticated() {
                             <div className="flex items-center justify-center">
                                 <div className="animate-spin rounded-full h-5 w-5 border-t-2 border-b-2 border-white"></div>
                             </div>
+                        ) : clearSuccess ? (
+                            'Collection Cleared'
                         ) : (
                             'Clear Collection'
                         )}
