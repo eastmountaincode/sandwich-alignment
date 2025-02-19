@@ -2,6 +2,7 @@ import OpenAI from "openai";
 import { zodResponseFormat } from "openai/helpers/zod";
 import { z } from "zod";
 import sandwichData from '../src/data/sandwiches.json' with { type: 'json' };
+console.log(sandwichData)
 
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
