@@ -19,12 +19,12 @@ const BoardSchema = z.object({
     y: z.number()
   })),
   axisLabels: z.object({
-    top: z.string(),
-    bottom: z.string(),
-    left: z.string(),
-    right: z.string()
+    top: z.literal("Good"),
+    bottom: z.literal("Evil"),
+    left: z.literal("Lawful"),
+    right: z.literal("Chaotic")
   }),
-  note: z.string(" "),
+  note: z.literal("AI Generated Board"),
   source: z.literal("ai-generated")
 });
 
@@ -39,24 +39,22 @@ export default async function handler(req, res) {
     );
 
     try {
-      const completion = await openai.chat.completions.create({
+      const completion = await openai.beta.chat.completions.parse({
         model: "gpt-4o-mini",
         messages: [
           {
             role: "system",
-            content: "You are a helpful assistant."
+            content: "You are an expert in generating realistic synthetic data. Generate positions for sandwiches on a chart where X coordinates represent Lawful (-1) to Chaotic (1) and Y coordinates represent Good (1) to Evil (-1)."
           },
           {
             role: "user",
-            content: "Say hello!"
+            content: `Generate board data using sandwich IDs from this list: ${sandwichData.sandwiches.map(s => s.id).join(', ')}`
           }
-        ]
+        ],
+        response_format: zodResponseFormat(BoardSchema, "board")
       });
 
-      return res.status(200).json({
-        message: completion.choices[0].message.content,
-        sandwichIds: sandwichData.sandwiches.map(s => s.id)
-      });
+      return res.status(200).json(completion.choices[0].message.parsed);
     } catch (error) {
       return res.status(500).json({ error: error.message });
     }
