@@ -10,6 +10,7 @@ function AdminAuthenticated() {
     const [isGenerating, setIsGenerating] = useState(false);
     const [generatedData, setGeneratedData] = useState<any>(null);
     const [isSubmitting, setIsSubmitting] = useState(false);
+    const [submissionSuccess, setSubmissionSuccess] = useState(false);
 
     const handleGenerateBoard = async () => {
         setIsGenerating(true);
@@ -33,7 +34,6 @@ function AdminAuthenticated() {
 
     const handleSubmitBoard = async () => {
         if (!generatedData) return;
-
         setIsSubmitting(true);
         try {
             const response = await fetch('/api/submitBoard', {
@@ -50,6 +50,7 @@ function AdminAuthenticated() {
 
             const data = await response.json();
             console.log('Board submitted:', data);
+            setSubmissionSuccess(true);
         } catch (error) {
             console.error('Error submitting board:', error);
         } finally {
@@ -79,13 +80,15 @@ function AdminAuthenticated() {
                     </button>
                     <button
                         onClick={handleSubmitBoard}
-                        className="px-4 py-2 bg-purple-500 text-white rounded hover:bg-purple-400 transition-colors"
-                        disabled={isSubmitting || !generatedData}
+                        className="px-4 py-2 bg-purple-500 text-white rounded hover:bg-purple-400 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                        disabled={isSubmitting || !generatedData || submissionSuccess}
                     >
                         {isSubmitting ? (
                             <div className="flex items-center justify-center">
                                 <div className="animate-spin rounded-full h-5 w-5 border-t-2 border-b-2 border-white"></div>
                             </div>
+                        ) : submissionSuccess ? (
+                            'Board Submitted'
                         ) : (
                             'Submit Generated Board'
                         )}
