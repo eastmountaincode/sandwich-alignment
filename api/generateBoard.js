@@ -49,7 +49,7 @@ export default async function handler(req, res) {
         messages: [
           {
             role: "system",
-            content: "You are an expert in generating realistic synthetic data. Generate positions for sandwiches on a chart where X coordinates represent Lawful (-1) to Chaotic (1) and Y coordinates represent Good (1) to Evil (-1)."
+            content: "You are an expert in generating realistic synthetic data. Generate positions for sandwiches on a chart where X coordinates represent Lawful (-1) to Chaotic (1) and Y coordinates represent Good (1) to Evil (-1). Coordinates should have 3 decimal places."
           },
           {
             role: "user",
