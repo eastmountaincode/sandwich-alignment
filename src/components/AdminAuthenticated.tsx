@@ -50,14 +50,6 @@ function AdminAuthenticated() {
                         <div>
                             <h3 className="text-lg mb-2">Message</h3>
                             <div>{generatedData.message}</div>
-                            <h3 className="text-lg mb-2">Sandwich IDs</h3>
-                            <div className="space-y-2">
-                                {generatedData.sandwichIds.map((id: string) => (
-                                    <div key={id} className="bg-gray-700 p-2 rounded">
-                                        {id}
-                                    </div>
-                                ))}
-                            </div>
                         </div>
                     </div>
                 </div>
