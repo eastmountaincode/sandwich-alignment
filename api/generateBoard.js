@@ -38,28 +38,28 @@ export default async function handler(req, res) {
       readFileSync(join(__dirname, '../src/data/sandwiches.json'), 'utf8')
     );
 
-    return res.status(200).json({
-      sandwichIds: sandwichData.sandwiches.map(s => s.id)
-    });
-
-    /* try {
-      const completion = await openai.beta.chat.completions.parse({
+    try {
+      const completion = await openai.chat.completions.create({
         model: "gpt-4o-mini",
         messages: [
           {
             role: "system",
-            content: "You are an expert in generating realistic synthetic data. Generate positions for sandwiches on a chart where X coordinates represent Lawful (-1) to Chaotic (1) and Y coordinates represent Good (1) to Evil (-1)."
+            content: "You are a helpful assistant."
           },
           {
             role: "user",
-            content: `Generate board data using sandwich IDs from this list: ${sandwichData.sandwiches.map(s => s.id).join(', ')}`
+            content: "Say hello!"
           }
-        ],
-        response_format: zodResponseFormat(BoardSchema, "board")
+        ]
       });
 
-      return res.status(200).json(completion.choices[0].message.parsed);
-    } */
+      return res.status(200).json({
+        message: completion.choices[0].message.content,
+        sandwichIds: sandwichData.sandwiches.map(s => s.id)
+      });
+    } catch (error) {
+      return res.status(500).json({ error: error.message });
+    }
   } catch (error) {
     return res.status(500).json({ 
       error: error.message,
