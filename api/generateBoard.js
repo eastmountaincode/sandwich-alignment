@@ -38,6 +38,11 @@ export default async function handler(req, res) {
       readFileSync(join(__dirname, '../src/data/sandwiches.json'), 'utf8')
     );
 
+    // Shuffle the sandwich IDs
+    const shuffledIds = [...sandwichData.sandwiches]
+      .sort(() => Math.random() - 0.5)
+      .map(s => s.id);
+
     try {
       const completion = await openai.beta.chat.completions.parse({
         model: "gpt-4o-mini-2024-07-18",
@@ -48,7 +53,7 @@ export default async function handler(req, res) {
           },
           {
             role: "user",
-            content: `Generate board data. Generate 10-20 entries. Use sandwich IDs from this list: ${sandwichData.sandwiches.map(s => s.id).join(', ')}`
+            content: `Generate board data. Generate 10-20 entries. Use sandwich IDs from this list: ${shuffledIds.join(', ')}.`
           }
         ],
         response_format: zodResponseFormat(BoardSchema, "board")
@@ -59,7 +64,7 @@ export default async function handler(req, res) {
       return res.status(500).json({ error: error.message });
     }
   } catch (error) {
-    return res.status(500).json({ 
+    return res.status(500).json({
       error: error.message,
       path: join(__dirname, '../src/data/sandwiches.json')
     });
