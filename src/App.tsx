@@ -26,6 +26,7 @@ function App() {
             <Route path="/game" element={<SandwichAlignmentGame />} />
             <Route path="/about" element={<About />} />
             <Route path="/admin" element={<Admin />} />
+            <Route path="*" element={<Navigate to="/game" />} />
           </Routes>
         </main>
       </div>
