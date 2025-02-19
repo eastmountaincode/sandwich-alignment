@@ -54,11 +54,18 @@ function Admin() {
             placeholder="Enter password"
             className="w-full p-2 rounded bg-gray-700 text-gray-200 border border-gray-600 focus:border-blue-500 outline-none"
           />
-          <button 
+          <button
             onClick={handleLogin}
             className="w-full px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-500 transition-colors"
+            disabled={isLoading}
           >
-            Login
+            {isLoading ? (
+              <div className="flex items-center justify-center">
+                <div className="animate-spin rounded-full h-5 w-5 border-t-2 border-b-2 border-white"></div>
+              </div>
+            ) : (
+              'Login'
+            )}
           </button>
         </div>
       </div>
