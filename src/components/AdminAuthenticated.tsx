@@ -15,6 +15,7 @@ function AdminAuthenticated() {
             });
 
             const data = await response.json();
+            console.log('Generated data:', data);
             setGeneratedData(data);
         } catch (error) {
             console.error('Error generating board:', error);
