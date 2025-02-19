@@ -78,33 +78,14 @@ function Admin() {
             <h2 className="text-xl mb-4">Generated Board Data</h2>
             <div className="space-y-4">
               <div>
-                <h3 className="text-lg mb-2">Axis Labels</h3>
-                <div className="grid grid-cols-2 gap-2">
-                  {Object.entries(generatedData.axisLabels as {
-                    top: string;
-                    bottom: string;
-                    left: string;
-                    right: string;
-                  }).map(([key, value]) => (
-                    <div key={key} className="bg-gray-700 p-2 rounded">
-                      <span className="font-semibold">{key}:</span> {String(value)}
-                    </div>
-                  ))}
-                </div>
-              </div>
-              <div>
-                <h3 className="text-lg mb-2">Sandwiches</h3>
+                <h3 className="text-lg mb-2">Sandwich IDs</h3>
                 <div className="space-y-2">
-                  {generatedData.sandwichesOnBoard.map((sandwich: any) => (
-                    <div key={sandwich.id} className="bg-gray-700 p-2 rounded">
-                      ID: {sandwich.id}, X: {sandwich.x}, Y: {sandwich.y}
+                  {generatedData.sandwichIds.map((id: string) => (
+                    <div key={id} className="bg-gray-700 p-2 rounded">
+                      {id}
                     </div>
                   ))}
                 </div>
-              </div>
-              <div>
-                <h3 className="text-lg mb-2">Source</h3>
-                <div className="bg-gray-700 p-2 rounded">{generatedData.source}</div>
               </div>
             </div>
           </div>
