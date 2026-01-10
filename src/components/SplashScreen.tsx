@@ -9,14 +9,14 @@ const SplashScreen = () => {
     return () => window.removeEventListener('resize', handleResize)
   }, [])
     return (
-      <div className="lg:hidden flex flex-col items-center justify-center text-gray-200 p-8 text-center">
+      <div className="lg:hidden flex flex-col items-center justify-center text-neutral-200 p-8 text-center">
         <p className="text-2xl font-medium mb-4">
           Please view on a larger screen
         </p>
-        <p className="text-xl text-gray-400">
+        <p className="text-xl text-neutral-500">
           (minimum width: 1024px)
         </p>
-        <p className="text-lg text-gray-400 mt-6">
+        <p className="text-lg text-neutral-500 mt-6">
           Current width: {windowWidth}px
         </p>
         <p className="text-4xl mt-8">🥪</p>

@@ -56,7 +56,7 @@ export default async function handler(req, res) {
           },
           {
             role: "user",
-            content: `Generate board data. Generate 10-20 entries. Use sandwich IDs from this list: ${shuffledSandwiches.map(s => s.id).join(', ')}.`
+            content: `Generate board data. How many entries? Generate 10 to 35 entries - a number within that range. Use sandwich IDs from this list: ${shuffledSandwiches.map(s => s.id).join(', ')}.`
           }
         ],
         response_format: zodResponseFormat(BoardSchema, "board")

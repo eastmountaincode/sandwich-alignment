@@ -37,25 +37,25 @@ function Admin() {
   }
 
   return (
-    <div className="bg-gray-900 flex items-center justify-center">
-      <div className="bg-gray-800 p-8 rounded-lg w-[400px]">
-        <h2 className="text-2xl text-gray-200 mb-6">Admin Login</h2>
+    <div className="bg-black flex items-center justify-center">
+      <div className="bg-neutral-900 p-8 rounded-lg w-[400px] border border-neutral-700">
+        <h2 className="text-2xl text-neutral-200 mb-6">Admin Login</h2>
         <div className="space-y-4">
           <input
             type="password"
             value={password}
             onChange={handlePasswordChange}
             placeholder="Enter password"
-            className="w-full p-2 rounded bg-gray-700 text-gray-200 border border-gray-600 focus:border-blue-500 outline-none"
+            className="w-full p-2 rounded bg-neutral-800 text-neutral-200 border border-neutral-600 focus:border-white outline-none"
           />
           <button
             onClick={handleLogin}
-            className="w-full px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-500 transition-colors"
+            className="w-full px-4 py-2 bg-white text-black rounded hover:bg-neutral-200 transition-colors"
             disabled={isLoading}
           >
             {isLoading ? (
               <div className="flex items-center justify-center">
-                <div className="animate-spin rounded-full h-5 w-5 border-t-2 border-b-2 border-white"></div>
+                <div className="animate-spin rounded-full h-5 w-5 border-t-2 border-b-2 border-black"></div>
               </div>
             ) : (
               'Login'

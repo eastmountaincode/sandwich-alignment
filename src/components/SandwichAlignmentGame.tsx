@@ -37,21 +37,21 @@ function SandwichAlignmentGame() {
       {/* Main game content - only visible above 1024px */}
       <div className="hidden lg:flex flex-col gap-4 w-full" onClick={handleBackgroundClick}>
 
-        <div className="w-full h-16 bg-gray-800 rounded-lg flex items-center">
+        <div className="w-full h-16 bg-neutral-900 rounded-lg flex items-center">
           <ControlPanel />
         </div>
 
         <div className="flex gap-4">
-          <div className="w-[750px] h-[550px] bg-gray-800 rounded-lg">
+          <div className="w-[750px] h-[550px] bg-neutral-900 rounded-lg">
             <AlignmentBoard />
           </div>
 
-          <div className="flex-1 bg-gray-800 rounded-lg">
+          <div className="flex-1 bg-neutral-900 rounded-lg">
             <SandwichInspector />
           </div>
         </div>
 
-        <div className="w-full h-48 bg-gray-800 rounded-lg p-4">
+        <div className="w-full h-48 bg-neutral-900 rounded-lg p-4">
           <SandwichCarousel />
         </div>
       </div>

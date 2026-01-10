@@ -33,22 +33,29 @@ function SandwichCarousel() {
   const handleDragStart = (e: React.DragEvent, sandwich: typeof sandwichData.sandwiches[0]) => {
     e.dataTransfer.setData('application/json', JSON.stringify(sandwich));
 
-    // Find the image element within the current target
-    const imgElement = e.currentTarget.querySelector('img') as HTMLImageElement;
-    if (!imgElement) return;
+    // Find the video element within the current target
+    const videoElement = e.currentTarget.querySelector('video') as HTMLVideoElement;
+    if (!videoElement) return;
 
-    // Clone the image element
-    const ghostImg = imgElement.cloneNode(true) as HTMLImageElement;
+    // Create a canvas to capture the current video frame
+    const canvas = document.createElement('canvas');
+    const scaleFactor = 1.8;
+    canvas.width = videoElement.videoWidth * scaleFactor || 200;
+    canvas.height = videoElement.videoHeight * scaleFactor || 100;
+    const ctx = canvas.getContext('2d');
+    if (ctx) {
+      ctx.drawImage(videoElement, 0, 0, canvas.width, canvas.height);
+    }
 
-    // Scale the cloned image
-    const scaleFactor = 1.8; // Adjust this factor to make the image slightly larger
-    ghostImg.style.width = `${imgElement.width * scaleFactor}px`;
-    ghostImg.style.height = `${imgElement.height * scaleFactor}px`;
-
+    // Create an image from the canvas
+    const ghostImg = document.createElement('img');
+    ghostImg.src = canvas.toDataURL();
+    ghostImg.style.width = `${videoElement.offsetWidth * scaleFactor}px`;
+    ghostImg.style.height = `${videoElement.offsetHeight * scaleFactor}px`;
     ghostImg.style.position = 'absolute';
-    ghostImg.style.top = '-1500px'; // Move it off-screen
-    ghostImg.style.left = '-1500px'; // Move it off-screen
-    ghostImg.style.pointerEvents = 'none'; // Ensure it doesn't interfere with other elements
+    ghostImg.style.top = '-1500px';
+    ghostImg.style.left = '-1500px';
+    ghostImg.style.pointerEvents = 'none';
     ghostImg.style.opacity = '0.5';
 
     document.body.appendChild(ghostImg);
@@ -75,7 +82,7 @@ function SandwichCarousel() {
     <div className="w-full h-full rounded-lg flex items-center select-none">
       <button
         onClick={() => scroll('left')}
-        className="px-4 py-2 bg-gray-700 text-gray-200 rounded-l hover:bg-gray-600 h-full"
+        className="px-4 py-2 bg-neutral-800 text-neutral-200 rounded-l hover:bg-neutral-700 h-full"
       >
         ←
       </button>
@@ -91,16 +98,19 @@ function SandwichCarousel() {
             draggable={true}
             onDragStart={(e) => handleDragStart(e, sandwich)}
             className={`flex flex-col flex-shrink-0 cursor-grab transition-transform h-full justify-center origin-top p-4
-            ${selectedSandwich?.id === sandwich.id ? 'ring-1 ring-white-500 rounded-lg' : ''}`}
+            ${selectedSandwich?.id === sandwich.id ? 'ring-1 ring-white rounded-lg' : ''}`}
           >
-            <img
+            <video
               src={sandwich.imagePath}
-              alt={sandwich.name}
+              autoPlay
+              loop
+              muted
+              playsInline
               draggable={false}
               className="w-24 h-12"
             />
             <p
-              className="text-gray-200 text-xs mt-1 text-center w-24 select-none"
+              className="text-neutral-200 text-xs mt-1 text-center w-24 select-none"
               draggable={false}
             >
               {sandwich.name}
@@ -111,7 +121,7 @@ function SandwichCarousel() {
 
       <button
         onClick={() => scroll('right')}
-        className="px-4 py-2 bg-gray-700 text-gray-200 rounded-r hover:bg-gray-600 h-full"
+        className="px-4 py-2 bg-neutral-800 text-neutral-200 rounded-r hover:bg-neutral-700 h-full"
       >
         →
       </button>

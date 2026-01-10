@@ -3,288 +3,287 @@
       {
         "id": "chicken-cutlet-special",
         "name": "Chicken Cutlet Special",
-        "imagePath": "/sandwich_gifs/02e0e-chicken-cutlet-special.gif"
+        "imagePath": "https://pub-793e536f00744a96a7dc440018cbbbf8.r2.dev/02e0e-chicken-cutlet-special.webm"
       },
       {
         "id": "cousin-ciro",
         "name": "Cousin Ciro (Regina's Grocery)",
-        "imagePath": "/sandwich_gifs/42e66-cousin-ciro-reginas-grocery.gif"
+        "imagePath": "https://pub-793e536f00744a96a7dc440018cbbbf8.r2.dev/42e66-cousin-ciro-reginas-grocery.webm"
       },
       {
         "id": "costco-rotisserie-chicken",
         "name": "Costco Rotisserie Chicken on Croissant",
-        "imagePath": "/sandwich_gifs/5397d-costco-rotisserie-chicken-on-croissant.gif"
+        "imagePath": "https://pub-793e536f00744a96a7dc440018cbbbf8.r2.dev/5397d-costco-rotisserie-chicken-on-croissant.webm"
       },
       {
         "id": "grilled-cheese",
         "name": "Grilled Cheese",
-        "imagePath": "/sandwich_gifs/5fcba-grilled-cheese.gif"
+        "imagePath": "https://pub-793e536f00744a96a7dc440018cbbbf8.r2.dev/5fcba-grilled-cheese.webm"
       },
       {
         "id": "double-double",
         "name": "Double Double Animal Style",
-        "imagePath": "/sandwich_gifs/88898-double-double-animal-style.gif"
+        "imagePath": "https://pub-793e536f00744a96a7dc440018cbbbf8.r2.dev/88898-double-double-animal-style.webm"
       },
       {
         "id": "a-litteri",
         "name": "A. Litteri",
-        "imagePath": "/sandwich_gifs/a-litteri-take-2.gif"
+        "imagePath": "https://pub-793e536f00744a96a7dc440018cbbbf8.r2.dev/a-litteri-take-2.webm"
       },
       {
         "id": "banh-mi",
         "name": "Banh Mi",
-        "imagePath": "/sandwich_gifs/banh-mi-bg-removed.gif"
+        "imagePath": "https://pub-793e536f00744a96a7dc440018cbbbf8.r2.dev/banh-mi-bg-removed.webm"
       },
       {
         "id": "beef-bulgogi-torta",
         "name": "Beef Bulgogi Torta",
-        "imagePath": "/sandwich_gifs/beef-bulgogi-torta.gif"
+        "imagePath": "https://pub-793e536f00744a96a7dc440018cbbbf8.r2.dev/beef-bulgogi-torta.webm"
       },
       {
         "id": "beef-hot-wet",
         "name": "Beef Hot Wet",
-        "imagePath": "/sandwich_gifs/beef-hot-wet.gif"
+        "imagePath": "https://pub-793e536f00744a96a7dc440018cbbbf8.r2.dev/beef-hot-wet.webm"
       },
       {
         "id": "bonkers-chinese-burger",
         "name": "Bonkers Chinese Burger",
-        "imagePath": "/sandwich_gifs/bonkers-chinese-burger.gif"
+        "imagePath": "https://pub-793e536f00744a96a7dc440018cbbbf8.r2.dev/bonkers-chinese-burger.webm"
       },
       {
         "id": "brisket-sandwich",
         "name": "Brisket Sandwich",
-        "imagePath": "/sandwich_gifs/brisket-sandwich.gif"
+        "imagePath": "https://pub-793e536f00744a96a7dc440018cbbbf8.r2.dev/brisket-sandwich.webm"
       },
       {
         "id": "broccoli-reuben",
         "name": "Broccoli Reuben",
-        "imagePath": "/sandwich_gifs/broccoli-reuben.gif"
+        "imagePath": "https://pub-793e536f00744a96a7dc440018cbbbf8.r2.dev/broccoli-reuben.webm"
       },
       {
         "id": "bub-and-pops",
         "name": "Bub and Pop's Italian Hoagie",
-        "imagePath": "/sandwich_gifs/bub-and-pops-italian-hoagie.gif"
+        "imagePath": "https://pub-793e536f00744a96a7dc440018cbbbf8.r2.dev/bub-and-pops-italian-hoagie.webm"
       },
       {
         "id": "rpg",
         "name": "The RPG",
-        "imagePath": "/sandwich_gifs/c6910-the-rpg.gif"
+        "imagePath": "https://pub-793e536f00744a96a7dc440018cbbbf8.r2.dev/c6910-the-rpg.webm"
       },
       {
         "id": "california-chicken-wrap",
         "name": "California Chicken Wrap",
-        "imagePath": "/sandwich_gifs/california-chicken-wrap.gif"
+        "imagePath": "https://pub-793e536f00744a96a7dc440018cbbbf8.r2.dev/california-chicken-wrap.webm"
       },
       {
         "id": "rosemary-braised-beef",
         "name": "Rosemary Braised Beef",
-        "imagePath": "/sandwich_gifs/cfa9c-rosemary-braised-beef.gif"
+        "imagePath": "https://pub-793e536f00744a96a7dc440018cbbbf8.r2.dev/cfa9c-rosemary-braised-beef.webm"
       },
       {
         "id": "club-royale",
         "name": "Club Royale",
-        "imagePath": "/sandwich_gifs/club-royale-final.gif"
+        "imagePath": "https://pub-793e536f00744a96a7dc440018cbbbf8.r2.dev/club-royale-final.webm"
       },
       {
         "id": "club-sandwich",
         "name": "Club Sandwich",
-        "imagePath": "/sandwich_gifs/club-sandwich.gif"
+        "imagePath": "https://pub-793e536f00744a96a7dc440018cbbbf8.r2.dev/club-sandwich.webm"
       },
       {
         "id": "cold-cut-trio-banh-mi",
         "name": "Cold Cut Trio Banh Mi",
-        "imagePath": "/sandwich_gifs/cold-cut-trio-banh-mi.gif"
+        "imagePath": "https://pub-793e536f00744a96a7dc440018cbbbf8.r2.dev/cold-cut-trio-banh-mi.webm"
       },
       {
         "id": "grocery-store-sub",
         "name": "Doctored Up Grocery Store Sub",
-        "imagePath": "/sandwich_gifs/doctored-up-grocery-store-sub.gif"
+        "imagePath": "https://pub-793e536f00744a96a7dc440018cbbbf8.r2.dev/doctored-up-grocery-store-sub.webm"
       },
       {
         "id": "egg-turkey-sausage-bagel",
         "name": "Egg and Turkey Sausage on Onion Bagel",
-        "imagePath": "/sandwich_gifs/egg-and-turkey-sausage-on-onion-bagel.gif"
+        "imagePath": "https://pub-793e536f00744a96a7dc440018cbbbf8.r2.dev/egg-and-turkey-sausage-on-onion-bagel.webm"
       },
       {
         "id": "eggplant-parm",
         "name": "Eggplant Parm",
-        "imagePath": "/sandwich_gifs/eggplant-parm-1.gif"
+        "imagePath": "https://pub-793e536f00744a96a7dc440018cbbbf8.r2.dev/eggplant-parm-1.webm"
       },
       {
         "id": "fried-fish-hanks",
         "name": "Fried Fish Sandwich (Hank's)",
-        "imagePath": "/sandwich_gifs/fried-fish-sandwich-hanks.gif"
+        "imagePath": "https://pub-793e536f00744a96a7dc440018cbbbf8.r2.dev/fried-fish-sandwich-hanks.webm"
       },
       {
         "id": "fried-fish",
         "name": "Fried Fish Sandwich",
-        "imagePath": "/sandwich_gifs/fried-fish-sandwich.gif"
+        "imagePath": "https://pub-793e536f00744a96a7dc440018cbbbf8.r2.dev/fried-fish-sandwich.webm"
       },
       {
         "id": "half-smoke-egg-cheese",
         "name": "Half Smoke Egg and Cheese",
-        "imagePath": "/sandwich_gifs/half-smoke-egg-and-cheese.gif"
+        "imagePath": "https://pub-793e536f00744a96a7dc440018cbbbf8.r2.dev/half-smoke-egg-and-cheese.webm"
       },
       {
         "id": "half-smoke",
         "name": "Half Smoke",
-        "imagePath": "/sandwich_gifs/half-smoke.gif"
+        "imagePath": "https://pub-793e536f00744a96a7dc440018cbbbf8.r2.dev/half-smoke.webm"
       },
       {
         "id": "ispahan-macaron",
         "name": "Ispahan Macaron",
-        "imagePath": "/sandwich_gifs/ispahan-macaron.gif"
+        "imagePath": "https://pub-793e536f00744a96a7dc440018cbbbf8.r2.dev/ispahan-macaron.webm"
       },
       {
         "id": "jambon-buerre",
         "name": "Jambon Buerre",
-        "imagePath": "/sandwich_gifs/jambon-buerre.gif"
+        "imagePath": "https://pub-793e536f00744a96a7dc440018cbbbf8.r2.dev/jambon-buerre.webm"
       },
       {
         "id": "jerk-chicken",
         "name": "Jerk Chicken Sandwich",
-        "imagePath": "/sandwich_gifs/jerk-chicken-sandwich.gif"
+        "imagePath": "https://pub-793e536f00744a96a7dc440018cbbbf8.r2.dev/jerk-chicken-sandwich.webm"
       },
       {
         "id": "lamb-souvlaki",
         "name": "Lamb Souvlaki",
-        "imagePath": "/sandwich_gifs/lamb-souvlaki.gif"
+        "imagePath": "https://pub-793e536f00744a96a7dc440018cbbbf8.r2.dev/lamb-souvlaki.webm"
       },
       {
         "id": "leftovers",
         "name": "Leftovers Sandwich",
-        "imagePath": "/sandwich_gifs/leftovers-sandwich.gif"
+        "imagePath": "https://pub-793e536f00744a96a7dc440018cbbbf8.r2.dev/leftovers-sandwich.webm"
       },
       {
         "id": "meatball-sub",
         "name": "Meatball Sub",
-        "imagePath": "/sandwich_gifs/meatball-sub.gif"
+        "imagePath": "https://pub-793e536f00744a96a7dc440018cbbbf8.r2.dev/meatball-sub.webm"
       },
       {
         "id": "mortadella-prosciutto-burrata",
         "name": "Mortadella, Prosciutto, and Burrata",
-        "imagePath": "/sandwich_gifs/mortadella-prosciutto-and-burrata.gif"
+        "imagePath": "https://pub-793e536f00744a96a7dc440018cbbbf8.r2.dev/mortadella-prosciutto-and-burrata.webm"
       },
       {
         "id": "neapolitan-ice-cream",
         "name": "Neapolitan Ice Cream Sandwich",
-        "imagePath": "/sandwich_gifs/neapolitan-ice-cream-sandwich.gif"
+        "imagePath": "https://pub-793e536f00744a96a7dc440018cbbbf8.r2.dev/neapolitan-ice-cream-sandwich.webm"
       },
       {
         "id": "negril-fish",
         "name": "Negril Fish Sandwich",
-        "imagePath": "/sandwich_gifs/negril-fish-sandwich.gif"
+        "imagePath": "https://pub-793e536f00744a96a7dc440018cbbbf8.r2.dev/negril-fish-sandwich.webm"
       },
       {
         "id": "north-carolina-pork",
         "name": "North Carolina Chopped Pork",
-        "imagePath": "/sandwich_gifs/north-carolina-chopped-pork.gif"
+        "imagePath": "https://pub-793e536f00744a96a7dc440018cbbbf8.r2.dev/north-carolina-chopped-pork.webm"
       },
       {
         "id": "pabellon-arepa",
         "name": "Pabellon Arepa",
-        "imagePath": "/sandwich_gifs/pabellon-arrepa.gif"
+        "imagePath": "https://pub-793e536f00744a96a7dc440018cbbbf8.r2.dev/pabellon-arrepa.webm"
       },
       {
         "id": "peking-duck-bao",
         "name": "Peking Duck Bao",
-        "imagePath": "/sandwich_gifs/peking-duck-bao.gif"
+        "imagePath": "https://pub-793e536f00744a96a7dc440018cbbbf8.r2.dev/peking-duck-bao.webm"
       },
       {
         "id": "pork-gyro",
         "name": "Pork Gyro",
-        "imagePath": "/sandwich_gifs/pork-gyro.gif"
+        "imagePath": "https://pub-793e536f00744a96a7dc440018cbbbf8.r2.dev/pork-gyro.webm"
       },
       {
         "id": "reuben",
         "name": "Reuben",
-        "imagePath": "/sandwich_gifs/reuben.gif"
+        "imagePath": "https://pub-793e536f00744a96a7dc440018cbbbf8.r2.dev/reuben.webm"
       },
       {
         "id": "roast-beef-spinach-wrap",
         "name": "Roast Beef Spinach Wrap",
-        "imagePath": "/sandwich_gifs/roast-beef-spinach-wrap.gif"
+        "imagePath": "https://pub-793e536f00744a96a7dc440018cbbbf8.r2.dev/roast-beef-spinach-wrap.webm"
       },
       {
         "id": "salt-bagel-lox",
         "name": "Salt Bagel with Lox",
-        "imagePath": "/sandwich_gifs/salt-bagel-with-lox-cc.gif"
+        "imagePath": "https://pub-793e536f00744a96a7dc440018cbbbf8.r2.dev/salt-bagel-with-lox-cc.webm"
       },
       {
         "id": "scrambled-egg-fried-chicken",
         "name": "Scrambled Egg and Fried Chicken Sandwich",
-        "imagePath": "/sandwich_gifs/scrambled-egg-and-fried-chicken-sandwich.gif"
+        "imagePath": "https://pub-793e536f00744a96a7dc440018cbbbf8.r2.dev/scrambled-egg-and-fried-chicken-sandwich.webm"
       },
       {
         "id": "smoked-salmon-cucumber",
         "name": "Smoked Salmon and Cucumber on Croissant",
-        "imagePath": "/sandwich_gifs/smoked-salmon-and-cucumber-on-croissant.gif"
+        "imagePath": "https://pub-793e536f00744a96a7dc440018cbbbf8.r2.dev/smoked-salmon-and-cucumber-on-croissant.webm"
       },
       {
         "id": "spicy-cumin-lamb",
         "name": "Spicy Cumin Lamb Burger",
-        "imagePath": "/sandwich_gifs/spicy-cumin-lamb-burger.gif"
+        "imagePath": "https://pub-793e536f00744a96a7dc440018cbbbf8.r2.dev/spicy-cumin-lamb-burger.webm"
       },
       {
         "id": "stachowskis-pastrami",
         "name": "Stachowski's Pastrami",
-        "imagePath": "/sandwich_gifs/stachowskis-pastrami-regraded-1.gif"
+        "imagePath": "https://pub-793e536f00744a96a7dc440018cbbbf8.r2.dev/stachowskis-pastrami-regraded-1.webm"
       },
       {
         "id": "summer-tomato",
         "name": "Summer Tomato Sandwich",
-        "imagePath": "/sandwich_gifs/summer-tomato-sandwich.gif"
+        "imagePath": "https://pub-793e536f00744a96a7dc440018cbbbf8.r2.dev/summer-tomato-sandwich.webm"
       },
       {
         "id": "swedish-hot-dog",
         "name": "Swedish Hot Dog with Shrimp Salad",
-        "imagePath": "/sandwich_gifs/swedish-hot-dog-with-shrimp-salad.gif"
+        "imagePath": "https://pub-793e536f00744a96a7dc440018cbbbf8.r2.dev/swedish-hot-dog-with-shrimp-salad.webm"
       },
       {
         "id": "swedish-smoked-salmon",
         "name": "Swedish Smoked Salmon and Poached Egg on Toast",
-        "imagePath": "/sandwich_gifs/swedish-smoked-salmon-and-poached-egg-on-toast.gif"
+        "imagePath": "https://pub-793e536f00744a96a7dc440018cbbbf8.r2.dev/swedish-smoked-salmon-and-poached-egg-on-toast.webm"
       },
       {
         "id": "taylor-ham",
         "name": "Taylor Ham Pork Roll",
-        "imagePath": "/sandwich_gifs/taylor-ham-pork-roll.gif"
+        "imagePath": "https://pub-793e536f00744a96a7dc440018cbbbf8.r2.dev/taylor-ham-pork-roll.webm"
       },
       {
         "id": "the-dude",
         "name": "The Dude",
-        "imagePath": "/sandwich_gifs/the-dude.gif"
+        "imagePath": "https://pub-793e536f00744a96a7dc440018cbbbf8.r2.dev/the-dude.webm"
       },
       {
         "id": "top-round-swiss",
         "name": "Top Round and Swiss with Gravy",
-        "imagePath": "/sandwich_gifs/top-round-and-swiss-with-gravy-v2.gif"
+        "imagePath": "https://pub-793e536f00744a96a7dc440018cbbbf8.r2.dev/top-round-and-swiss-with-gravy-v2.webm"
       },
       {
         "id": "torta-milanesa",
         "name": "Torta Milanesa",
-        "imagePath": "/sandwich_gifs/torta-milanesa.gif"
+        "imagePath": "https://pub-793e536f00744a96a7dc440018cbbbf8.r2.dev/torta-milanesa.webm"
       },
       {
         "id": "tuna-salad-hoagie",
         "name": "Tuna Salad Hoagie",
-        "imagePath": "/sandwich_gifs/tuna-salad-hoagie.gif"
+        "imagePath": "https://pub-793e536f00744a96a7dc440018cbbbf8.r2.dev/tuna-salad-hoagie.webm"
       },
       {
         "id": "turkey-cheddar",
         "name": "Turkey and Cheddar",
-        "imagePath": "/sandwich_gifs/turkey-and-cheddar.gif"
+        "imagePath": "https://pub-793e536f00744a96a7dc440018cbbbf8.r2.dev/turkey-and-cheddar.webm"
       },
       {
         "id": "vegan-root-vegetable",
         "name": "Vegan Root Vegetable Hoagie with Carrot Provolone",
-        "imagePath": "/sandwich_gifs/vegan-root-vegetable-hoagie-with-carrot-provolone.gif"
+        "imagePath": "https://pub-793e536f00744a96a7dc440018cbbbf8.r2.dev/vegan-root-vegetable-hoagie-with-carrot-provolone.webm"
       },
       {
         "id": "z-burger-bacon-cheese",
         "name": "Z-Burger Bacon Cheese Dog",
-        "imagePath": "/sandwich_gifs/z-burger-bacon-cheese-dog.gif"
+        "imagePath": "https://pub-793e536f00744a96a7dc440018cbbbf8.r2.dev/z-burger-bacon-cheese-dog.webm"
       }
     ]
   }
-  

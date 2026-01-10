@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom'
+import { Analytics } from '@vercel/analytics/react'
 import Header from './components/Header'
 import SandwichAlignmentGame from './components/SandwichAlignmentGame'
 import About from './components/About'
@@ -18,7 +19,7 @@ function App() {
 
   return (
     <Router>
-      <div className="min-h-screen bg-gray-900 px-4 py-2 text-gray-200" onClick={handlePageClick}>
+      <div className="min-h-screen bg-black px-4 py-2 text-neutral-200" onClick={handlePageClick}>
         <Header activeTab={activeTab} setActiveTab={setActiveTab} />
         <main className="max-w-7xl mx-auto mt-8 mb-12 px-2">
           <Routes>
@@ -30,6 +31,7 @@ function App() {
           </Routes>
         </main>
       </div>
+      <Analytics />
     </Router>
   )
 }

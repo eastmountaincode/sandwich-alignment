@@ -82,14 +82,14 @@ function AdminAuthenticated() {
     };
 
     return (
-        <div className="min-h-screen bg-gray-900 text-gray-200 p-8">
+        <div className="min-h-screen bg-black text-neutral-200 p-8">
             <h1 className="text-2xl mb-6">Admin Dashboard</h1>
-            <div className="bg-gray-800 rounded-lg p-6 mb-4">
+            <div className="bg-neutral-900 rounded-lg p-6 mb-4 border border-neutral-700">
                 <h2 className="text-xl mb-4">Database Management</h2>
-                <div className='flex'>
+                <div className='flex mb-6'>
                     <button
                         onClick={handleClearCollection}
-                        className="px-4 py-2 bg-red-600 text-white rounded hover:bg-red-500 transition-colors"
+                        className="px-4 py-2 bg-neutral-800 text-neutral-200 rounded hover:bg-neutral-700 transition-colors border border-neutral-600"
                         disabled={isClearing}
                     >
                         {isClearing ? (
@@ -108,7 +108,7 @@ function AdminAuthenticated() {
 
                     <button
                         onClick={handleGenerateBoard}
-                        className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-500 transition-colors"
+                        className="px-4 py-2 bg-neutral-800 text-neutral-200 rounded hover:bg-neutral-700 transition-colors"
                         disabled={isGenerating}
                     >
                         {isGenerating ? (
@@ -121,12 +121,12 @@ function AdminAuthenticated() {
                     </button>
                     <button
                         onClick={handleSubmitBoard}
-                        className="px-4 py-2 bg-purple-500 text-white rounded hover:bg-purple-400 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                        className="px-4 py-2 bg-white text-black rounded hover:bg-neutral-200 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                         disabled={isSubmitting || !generatedData || submissionSuccess}
                     >
                         {isSubmitting ? (
                             <div className="flex items-center justify-center">
-                                <div className="animate-spin rounded-full h-5 w-5 border-t-2 border-b-2 border-white"></div>
+                                <div className="animate-spin rounded-full h-5 w-5 border-t-2 border-b-2 border-black"></div>
                             </div>
                         ) : submissionSuccess ? (
                             'Board Submitted'

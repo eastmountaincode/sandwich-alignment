@@ -13,6 +13,7 @@
   "dependencies": {
     "@reduxjs/toolkit": "^2.5.1",
     "@tailwindcss/vite": "^4.0.3",
+    "@vercel/analytics": "^1.6.1",
     "canvas-confetti": "^1.9.3",
     "dotenv": "^16.4.7",
     "mongodb": "^6.13.0",

@@ -63,26 +63,26 @@ function ControlPanel() {
 
     return (
         <div className="flex justify-between items-center w-full rounded-lg mx-4">
-            <div className="text-gray-200 ms-4">
+            <div className="text-neutral-200 ms-4">
                 Sandwiches placed: {sandwichesOnBoard.length} / {sandwichData.sandwiches.length}
             </div>
 
             <div className="flex gap-4">
                 <button
                     onClick={() => setIsClearModalOpen(true)}
-                    className="px-4 py-2 bg-gray-700 text-gray-200 rounded hover:bg-gray-600 cursor-pointer"
+                    className="px-4 py-2 bg-neutral-800 text-neutral-200 rounded hover:bg-neutral-700 cursor-pointer"
                 >
                     Clear Board
                 </button>
                 <button
-                    className="px-4 py-2 bg-gray-700 text-gray-200 rounded hover:bg-gray-600 cursor-pointer"
+                    className="px-4 py-2 bg-neutral-800 text-neutral-200 rounded hover:bg-neutral-700 cursor-pointer"
                     onClick={() => setIsModalOpen(true)}
                 >
                     Set Axis Labels
                 </button>
                 <button
                     onClick={() => setIsSubmissionModalOpen(true)}
-                    className="px-4 py-2 bg-purple-500 text-gray-200 rounded hover:bg-purple-400 cursor-pointer"
+                    className="px-4 py-2 bg-white text-black rounded hover:bg-neutral-200 cursor-pointer"
                 >
                     Submit Board
                 </button>
