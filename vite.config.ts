@@ -8,4 +8,12 @@ export default defineConfig({
   plugins: [
     react(),
     tailwindcss()],
+  server: {
+    proxy: {
+      '/api': {
+        target: 'https://sandwich-alignment.vercel.app',
+        changeOrigin: true,
+      }
+    }
+  }
 })
